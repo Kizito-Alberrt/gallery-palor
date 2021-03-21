@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    {% if title %}
+    <title>Gallery-Palor - {{title}}</title>
+    {% else %}
+    <title> Gallery Palor</title>
+    {% endif%}
+</head>
+<body>
+    {% block content %} <h1>Palor for {{date|date:"l d-F Y"}}</h1> {%endblock%}
+</body>
+</html>

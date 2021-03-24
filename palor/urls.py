@@ -1,7 +1,8 @@
-from django.conf.urls import url 
+from django.urls import path
 from . import views
 
-urlpatterns=[
-    url('^today/$',views.palor_of_day,name ='your palor'),
-    url(r'^archives/(\d{4}-\d{2}-\d{2})/$',views.past_days_palor,name ='pastPalor')  
+urlpatterns = [ 
+    path('',views.gallery, name='gallery'),
+    path('photo/<str:pk>/', views.viewPhoto, name='photo'),
+    path('add/', views.addPhoto, name='add'),
 ]

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Gallery-palor</title>
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,16 +15,49 @@
         .image-thumbail {
             height: 200px;
             object-fit: cover;
+            font-family:'Open Sans', Arial, sans-serif;
+            box-sizing: border-box;
         }
 
         .list-group-item a {
             text-decoration: none;
             color: black;
+            flex-direction: flex;
+            font-family:'Open Sans', Arial, sans-serif;
+            display: flex;
+            float: center;
+            
+            
         }
+        .body{
+            background-color: rgba(4, 43, 43, 0.459);
+
+        }
+        
+        .header .menue p{
+            color: rgb(15, 2, 2);
+            font-family: Lucida Console Courier, monospace;
+            padding: 15px;
+            font-size: 30px;
+    
+        }
+        .about{
+            text-align: center;
+            font-family: Lucida Console Courier, monospace;
+        }
+        .gla{
+            background-color: rgba(0, 0, 0, 0.144);
+        }
+        h5{
+            color: blanchedalmond;
+            font-family: Lucida Console Courier, monospace;
+        }
+        
+        
     </style>
 </head>
 
-<body class="m-5">
+<body class="body">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -37,7 +70,34 @@
   </nav>
   <br>
   <br>
-  
+
+  <div class="header">
+    <h1>Gallery-palor</h1>
+    <div class="menue">
+        <p>Your digital solution</p>
+       
+
+    </div>
+
+</div>
+<br>
+<br>
+
+<div class="about">
+    <h2>About us</h2>
+    <p>Over 7 years, we have worked on a variety of projects offering insight driven design solutions which are thoughtful, innovative and well researched. Our designs are customized to our clients needs. We follow a process driven and immersive approach in our work and take time to get to know our clients and their brands. We do not promise overnight design solutions, but can guarantee a fresh perspective and an enthusiastic team.
+
+        We approach each project with curiosity, a lot of questions and multi-directional perspective to solving design problems. We strongly believe that good design emerges from collaboration and a variety of different perspectives, which come together to create a strong, insight driven and long lasting brand. For us, each project is a partnership between the client and the designer.
+        
+        </p>
+
+        <br>
+        <br>
+
+</div>
+  <div class="about">
+      <h1> Our Collections</h1>
+  </div>
 
     <div class="container">
         <div class="row">
@@ -59,8 +119,8 @@
                         </li>
                         {% endfor %}
 
-
-                        <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>
+                        <a href="{% url 'add' %}" class="btn btn-secondary row-justify-content-center">Add a Photo</a>
+                        
 
                     </ul>
                 </div>
@@ -95,7 +155,29 @@
             </div>
         </div>
     </div>
+    
+    
 
 </body>
+<div class="gla">
+    <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">gallery-palor</a>
+        </li>
+       
+        
+      </ul>
+    </div>
+    <div class="card-body bg-dark">
+      <h5 class="card-title">Changing the world to a better visual city</h5>
+      <p class="card-text">We believe in your contribution to light up the world</p>
+      <a href="{% url 'add' %}" class="btn btn-primary">Add a photo</a>
+    </div>
+  </div>
+       
+</div>
+
 
 </html>
